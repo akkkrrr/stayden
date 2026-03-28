@@ -55,6 +55,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-08MH5C9VEG"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-08MH5C9VEG');`}
+        </Script>
+        {/* MailerLite */}
         <Script
           src="https://assets.mailerlite.com/js/universal.js"
           strategy="afterInteractive"
