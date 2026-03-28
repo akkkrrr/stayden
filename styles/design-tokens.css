@@ -1,0 +1,146 @@
+/* ============================================
+   STAYDEN DESIGN SYSTEM — "Editorial Boudoir"
+   Aino: Tämä on brändin visuaalinen sielu.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Brand Colors */
+  --wine: #722F37;
+  --wine-deep: #5A252C;
+  --wine-light: #8B3A43;
+  --gold: #C4A265;
+  --gold-light: #D4B87A;
+  --gold-dim: #A8894F;
+  --nude: #C9A98C;
+  --cream: #F5F0EB;
+  --cream-warm: #F0E8E0;
+  --blush: #D4A5A5;
+  --blush-light: #E8C5C5;
+  --charcoal: #2C2C2C;
+  --charcoal-soft: #4A4A4A;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 10rem;
+
+  /* Seam Line (brand signature) */
+  --seam: 1px solid var(--gold);
+  --seam-thick: 2px solid var(--gold);
+
+  /* Transitions */
+  --ease-elegant: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.6s var(--ease-elegant);
+  --transition-med: 0.35s var(--ease-elegant);
+  --transition-fast: 0.2s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle silk texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4a265' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   SHARED BUTTON STYLES
+   ============================================ */
+.btn-primary {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: var(--gold);
+  color: var(--wine-deep);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-med);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 162, 101, 0.3);
+}
+.btn-ghost {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(245, 240, 235, 0.3);
+  cursor: pointer;
+  transition: var(--transition-med);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ============================================
+   EDITORIAL SECTION HEADERS
+   ============================================ */
+.editorial-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+.editorial-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+}
+.editorial-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--charcoal);
+  font-weight: 400;
+}
+.editorial-heading em {
+  font-style: italic;
+  color: var(--wine);
+}
+.editorial-seam {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: var(--space-lg) auto 0;
+}
