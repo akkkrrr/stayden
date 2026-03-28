@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@/styles/design-tokens.css";
 import "@/styles/components.css";
 import Navigation from "@/components/Navigation";
@@ -53,6 +54,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://assets.mailerlite.com/js/universal.js"
+          strategy="afterInteractive"
+        />
+        <Script id="mailerlite-init" strategy="afterInteractive">
+          {`window.ml=window.ml||function(){(ml.q=ml.q||[]).push(arguments)};ml('account','2227910');`}
+        </Script>
+      </head>
       <body>
         <AgeGate />
         <Navigation />

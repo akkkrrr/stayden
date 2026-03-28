@@ -356,6 +356,16 @@
   font-family: var(--font-body); white-space: nowrap;
 }
 .newsletter__submit:hover { background: var(--wine-deep); }
+.newsletter__submit:disabled, .newsletter__input:disabled {
+  opacity: 0.6; cursor: not-allowed;
+}
+.newsletter__success {
+  color: var(--gold); font-family: var(--font-accent); font-style: italic;
+  font-size: 1.05rem; margin-top: var(--space-md);
+}
+.newsletter__error {
+  color: #c0392b; font-size: 0.85rem; margin-top: var(--space-sm);
+}
 
 /* ============================================
    PRODUCT CARD (affiliate)
