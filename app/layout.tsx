@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://stayden.vercel.app",
   },
+  verification: {
+    google: "brR9RunL7BlN6VvR8hBhxF59cKWN3fiESSCYDVlWRK4",
+  },
 };
 
 export default function RootLayout({
